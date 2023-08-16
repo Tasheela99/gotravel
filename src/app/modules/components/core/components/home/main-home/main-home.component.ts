@@ -1,9 +1,10 @@
-import {Component, Input} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {OwlOptions } from 'ngx-owl-carousel-o';
 import {TourTypeCarousel} from "../../../../shared/interfaces/tour-type-carousel";
 import {MostPopularToursCarousel} from "../../../../shared/interfaces/most-popular-tours-carousel";
 import {LastMinutesOffer} from "../../../../shared/interfaces/last-minutes-offer";
 import {BlogPost} from "../../../../shared/interfaces/blog-post";
+import {NewsletterCarousel} from "../../../../shared/interfaces/newsletter-carousel";
 
 @Component({
   selector: 'app-main-home',
@@ -211,6 +212,25 @@ export class MainHomeComponent {
         "Comment one",
       ],
     },
+  ];
+
+
+  @Input() newsLetterCarousel:NewsletterCarousel[]=[
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image.png',
+      city:'Barcelona',
+      specialText:'50% OFF'
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image2.png',
+      city:'London',
+      specialText:'Last Minutes'
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image.png',
+      city:'Paris',
+      specialText:'Shopping'
+    },
   ]
 
   customOptions: OwlOptions = {
@@ -272,4 +292,29 @@ export class MainHomeComponent {
       }
     },
   }
+
+  newsLetterSliderOptions: OwlOptions = {
+    loop: true,
+    autoplay:true,
+    dots: false,
+    navSpeed: 1500,
+    margin:10,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+  }
+
+
+
 }

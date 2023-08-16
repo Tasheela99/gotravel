@@ -1,0 +1,114 @@
+.footer-outer{
+  width: 100%;
+  height: auto;
+
+
+  .footer-inner{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51,51,51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+
+
+    .footer-inner-items{
+      height: 400px;
+      padding: 20px;
+
+      .header{
+        color: white;
+        padding: 15px 0;
+      }
+
+      .description{
+        p{
+          color: #BDBDBD;
+        }
+      }
+      .date{
+        font-size: 12px;
+        color: #BDBDBD;
+      }
+      .contact-items{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #BDBDBD;
+
+        .fa-solid{
+          padding: 10px 10px 10px 0;
+        }
+      }
+
+      .updates-area{
+        a{
+          text-transform: capitalize;
+          text-decoration: none;
+          color: #BDBDBD;
+
+          &:hover{
+            color: white;
+          }
+        }
+      }
+    }
+
+
+    .social-accounts{
+      padding: 20px 0;
+      a{
+        color: #BDBDBD;
+        padding: 10px 5px ;
+      }
+    }
+
+    .insta-images{
+      padding: 5px;
+      height: 100px;
+
+      .img{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .img-1{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34490987_407018029780864_981531118127808512_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=0YY_POTicaMAX9olAbZ&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfB5kkjtLt9lvksxxaS5hqarRRgHZKkvpii-HBzzvyd7BQ&oe=64E1A01E");
+      }
+      .img-2{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34170788_246910056066571_1199857744736157696_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=9I1BSkxpciMAX9Omjs8&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAexhH6-4sDYh0iyZwEi3_UcR2MuuK7HZxwprabcCxW6Q&oe=64E1DAC8");
+      }
+      .img-3{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34787715_253736342042097_2573239083128061952_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=wAt7rZQRQMgAX9mEoP8&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfB2v1QAhmIXOm5ATkp6960im-o1IoItXr0BIC5ygY_ZCw&oe=64E0F0F5");
+      }
+      .img-4{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34623051_2087642768143956_1019326529684897792_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=K1E6RyErct8AX-rSPUZ&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAcUAwxkOgh1wZDcVm8gvqA5R05I3XMOdsHYKKDoemZZQ&oe=64E27904");
+      }
+      .img-5{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34726025_1747127898698274_3120711559257522176_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=3Qu_B5JrCrAAX8ypocg&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfA2SRkkLgqnFKp0Mbxo8NnZX8M_Swz0zLV3MkRXEsGQ4Q&oe=64E158B9");
+      }
+      .img-6{
+        background-image: url("https://scontent-bos5-1.cdninstagram.com/v/t51.2885-15/34675804_967769160013500_2989843918633304064_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=XB3AK1SFhDIAX89MdX-&_nc_ht=scontent-bos5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCMiF_AzPYCClDuJy_Fg9eh5TSiukfxIQ2ig8s9UwGvTQ&oe=64E23511");
+      }
+    }
+  }
+}
+
+.footer-bottom-outer{
+  width: 100%;
+  height: 100px;
+}
+.footer-bottom-inner{
+  width: 100%;
+  height: 100%;
+  background-color:rgb(40,40,40) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .copy-right{
+    color:rgb(0, 189, 187);
+  }
+}

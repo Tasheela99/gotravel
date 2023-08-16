@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     bottom: -80px;
     width: 100%;
-    height: 450px;
+    height: auto;
     background-color: #FFFFFF;
     padding: 40px;
 
@@ -729,6 +729,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 
+    .blog-post-area-inner-items-rows{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .blog-post-area-inner-items {
       display: flex;
       align-items: center;
@@ -754,7 +760,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .blog-post-area-inner-bottom-items {
       padding: 10px;
-      .card{
+
+      .card {
         margin: 0;
         padding: 0;
         border: none;
@@ -762,15 +769,22 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
 
 
-        .card-body{
+        .card-body {
           padding: 40px;
         }
 
-        .card-alternatives{
+        .card-alternatives {
           display: flex;
           align-items: center;
           justify-content: start;
           gap: 20px;
+        }
+
+        .card-alternatives > .comments{
+          &:hover{
+            color: $app-color;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -784,50 +798,175 @@ h1, h2, h3, h4, h5, h6 {
 //news letter area starts
 
 
-.newsletter-outer{
+.newsletter-outer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 600px;
-  border: 2px solid red;
 
 
-  .newsletter-inner{
+  .newsletter-inner {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    border: 2px solid black;
 
 
-    .newsletter-inner-left{
+    .newsletter-inner-left {
+
       width: 40%;
       height: 100%;
       background-size: cover;
       background-position: center;
       background-image: url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-image-2.jpg");
 
-      .newsletter-inner-left-item{
+      .newsletter-inner-left-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 40px;
-        border: 2px solid black;
         width: 100%;
         height: 100%;
+
+
+        .newsletter-card-outer {
+          padding: 80px 70px;
+          width: 100%;
+          height: 100%;
+
+
+          .newsletter-card-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            padding: 40px;
+
+
+            .title {
+              text-align: center;
+              text-transform: uppercase;
+            }
+
+            .sub-title {
+              text-transform: capitalize;
+              text-align: center;
+
+            }
+
+
+            .newsletter-form {
+              gap: 20px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+
+              input {
+                width: 100%;
+                height: 50px;
+              }
+
+              .newsletter-subscribe-btn {
+                border: none;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: 600;
+                padding: 20px 40px;
+                letter-spacing: 1px;
+                background-color: $app-color;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
       }
     }
 
-    .newsletter-inner-right{
-      padding: 40px;
+    .newsletter-inner-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 60%;
       height: 100%;
-      background-color: blue;
+      background-color: white;
+
+
+      .newsletter-inner-right-slider {
+        width: 70%;
+
+        .title {
+          padding: 20px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .specialText {
+          color: $app-color;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 1000px) {
-  .newsletter-outer{
+.newsletter-bottom-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.newsletter-bottom-inner {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $app-color;
+
+  .newsletter-bottom-inner-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .inner-text h4 {
+      text-transform: capitalize;
+      font-weight: 700 !important;
+      color: white;
+      text-align: center;
+
+    }
+
+
+    .newsletter-bottom-subscribe-btn {
+      border: none;
+      color: $app-color;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 20px 40px;
+      letter-spacing: 1px;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+
+  .newsletter-outer {
     height: auto;
     display: flex;
     align-items: center;
@@ -835,21 +974,74 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 
 
-    .newsletter-inner{
+    .newsletter-inner {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
 
 
-
       .newsletter-inner-left,
-      .newsletter-inner-right{
+      .newsletter-inner-right {
         width: 100%;
         height: 500px;
       }
+
+      .newsletter-inner-left {
+        padding: 0;
+
+        .newsletter-inner-left-item {
+
+
+          .newsletter-card-outer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            .newsletter-card-inner {
+              height: auto;
+              width: auto;
+
+            }
+          }
+        }
+      }
+
+      .newsletter-inner-right {
+        height: auto;
+      }
     }
   }
+  .newsletter-outer{
+    .newsletter-inner{
+      .newsletter-inner-right{
+        .newsletter-inner-right-slider{
+          .title{
+            font-size: 20px!important;
+          }
+        }
+      }
+    }
+}
+
+.newsletter-card-inner {
+  .title {
+    font-size: 30px !important;
+  }
+
+  .sub-title {
+    text-align: center;
+  }
+}
+
+.newsletter-bottom-inner-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 }
 
 
