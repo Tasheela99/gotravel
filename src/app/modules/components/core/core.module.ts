@@ -75,6 +75,13 @@ import { IconWithTextComponent } from './components/elements/typography/items/ic
 import { HighlightsComponent } from './components/elements/typography/items/highlights/highlights.component';
 import { TitleAndSubtitleComponent } from './components/elements/typography/items/title-and-subtitle/title-and-subtitle.component';
 import { CustomFontComponent } from './components/elements/typography/items/custom-font/custom-font.component';
+import { HomeContextComponent } from './components/home/home-context/home-context.component';
+import { BlogContextComponent } from './components/blog/blog-context/blog-context.component';
+import { PagesContextComponent } from './components/pages/pages-context/pages-context.component';
+import { ShopContextComponent } from './components/shop/shop-context/shop-context.component';
+import { ToursContextComponent } from './components/tours/tours-context/tours-context.component';
+import { ElementsContextComponent } from './components/elements/elements-context/elements-context.component';
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 
 @NgModule({
@@ -151,11 +158,19 @@ import { CustomFontComponent } from './components/elements/typography/items/cust
     IconWithTextComponent,
     HighlightsComponent,
     TitleAndSubtitleComponent,
-    CustomFontComponent
+    CustomFontComponent,
+    HomeContextComponent,
+    BlogContextComponent,
+    PagesContextComponent,
+    ShopContextComponent,
+    ToursContextComponent,
+    ElementsContextComponent,
+
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    CarouselModule
   ]
 })
 export class CoreModule { }
