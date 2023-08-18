@@ -188,131 +188,172 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+//deals area
 
-.deals-area-outer {
-  padding-bottom: 100px;
+
+.deals-and-discounts-outer {
+  margin-bottom: 100px;
+
+  .deals-and-discounts-inner {
+    .grid-item-container {
+
+      .item-04{
+
+        .title{
+          text-transform: uppercase;
+        }
+        height: auto;
+
+
+        .grid-item-inner{
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+
+          .grid-item-inner-image-outer{
+
+            width: 100%; height: 100%;
+            position: relative;
+
+            .overlay-text{
+              display: flex!important;
+              background-color: white;
+
+              .title{
+                font-family: Poppins, sans-serif;
+                color: #363636!important;
+              }
+              .subtitle{
+                color: #808285;
+                font-size: 18px;
+                font-family: 'Raleway', sans-serif;
+              }
+
+              .title-reduced{
+                font-size: 20px!important;
+              }
+            }
+          }
+
+        }
+      }
+
+
+      .grid-item-inner {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+
+        .grid-item-inner-image-outer {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .overlay-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: left;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+
+            .title{
+
+            }
+            .subtitle{
+
+            }
+            .price{
+              color: $app-color;
+              font-weight: 900;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
 }
 
 
-.deals-and-discounts-grid {
+.grid-item-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 100%;
-
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "item-01 item-01 item-04 item-04"
+    "item-01 item-01 item-5 item-6"
+    "item-2 item-3 item-5 item-7";
 }
 
-@mixin image-grid-container($height,$width,$grid-row-start,$grid-column-start,$grid-row-end,$grid-column-end) {
-  height: $height;
-  width: $width;
-  grid-row-start: $grid-row-start;
-  grid-column-start: $grid-column-start;
-  grid-row-end: $grid-row-end;
-  grid-column-end: $grid-column-end;
-
+.item-01 {
+  grid-area: item-01;
 }
 
-#item-0 {
-  @include image-grid-container(600px, 100%, 1, 1, 3, 3);
+.item-2 {
+  grid-area: item-2;
 }
 
-#item-1 {
-  @include image-grid-container(300px, 100%, 3, 1, 4, 2);
+.item-3 {
+  grid-area: item-3;
 }
 
-#item-2 {
-  @include image-grid-container(300px, 100%, 3, 2, 4, 3);
+.item-04 {
+  grid-area: item-04;
 }
 
-#item-3 {
-  @include image-grid-container(300px, 100%, 1, 3, 2, 5);
+.item-5 {
+  grid-area: item-5;
 }
 
-#item-4 {
-  @include image-grid-container(600px, 100%, 2, 3, 4, 4);
+.item-6 {
+  grid-area: item-6;
 }
 
-#item-5 {
-  @include image-grid-container(300px, 100%, 2, 4, 3, 5);
-}
-
-#item-6 {
-  @include image-grid-container(300px, 100%, 3, 4, 4, 5);
+.item-7 {
+  grid-area: item-7;
 }
 
 
-.deals-and-discounts-grid {
-  .image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.grid-item-inner-image-outer {
+  overflow: hidden;
 
+  .overlay-text {
+    display: none !important;
   }
 
-  .image-01 {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-1.jpg");
-  }
-
-  .image-02 {
-
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-2.jpg");
-  }
-
-  .image-03 {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-3.jpg");
-  }
-
-  .image-04 {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-6.jpg");
-  }
-
-  .image-05 {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-4.jpg");
-  }
-
-  .image-06 {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-5.jpg");
-  }
-}
-
-.right-top-inner-content {
-  background-color: #FFFFFF;
-}
-
-
-.discount-grid-inner {
-  padding: 30px;
-
-  .inner-description {
-    display: none;
-
-    h5 {
-      color: white;
-      text-transform: capitalize;
-      font-weight: 900;
+  &:hover {
+    .overlay-text {
+      display: flex !important;
+      cursor: pointer;
     }
 
-    p {
-      color: white;
-    }
-
-    :nth-child(3) {
-      font-weight: 900;
-      color: $app-color;
+    .g-img {
+      transition-duration: 1s;
+      transform: scale(1.1);
     }
   }
-
 }
 
-.image-outer:hover .image {
-  transform: scale(1.1);
-  transition-duration: 1s;
-  cursor: pointer;
-}
-
-.image-outer:hover .inner-description {
-  display: grid;
-}
 
 
 //Tour type starts
@@ -395,7 +436,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .popular-tours-inner {
     .popular-tours-inner-top-items {
-      padding: 30px 0;
+      text-align: center;
+      padding: 30px 10px;
 
       h1 {
         text-transform: uppercase;
@@ -472,6 +514,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
   .video-area-outer {
+    text-align: center;
     position: relative;
     top: -80px;
     width: 100%;
@@ -516,11 +559,19 @@ h1, h2, h3, h4, h5, h6 {
       }
 
       .card-title {
+        font-size: 20px;
+        font-family: Poppins, sans-serif;
+        text-transform: capitalize;
         font-weight: 700;
       }
 
       .card-subtitle {
         padding-bottom: 20px;
+
+
+        .fa-star{
+          color: $app-color;
+        }
       }
 
       .card-text {
@@ -532,8 +583,14 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
 
         .avatar {
-          padding-right: 50px;
-          font-size: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 30px;
+          img{
+            border-radius: 50%;
+          }
+
         }
 
         .avatar-name {
@@ -544,6 +601,21 @@ h1, h2, h3, h4, h5, h6 {
 
     }
   }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fade-in-right 1s ease-in forwards;
 }
 
 
@@ -729,7 +801,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 
-    .blog-post-area-inner-items-rows{
+    .blog-post-area-inner-items-rows {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -780,8 +852,8 @@ h1, h2, h3, h4, h5, h6 {
           gap: 20px;
         }
 
-        .card-alternatives > .comments{
-          &:hover{
+        .card-alternatives > .comments {
+          &:hover {
             color: $app-color;
             cursor: pointer;
           }
@@ -964,8 +1036,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1200px) {
-
-
   .newsletter-outer {
     height: auto;
     display: flex;
@@ -1013,34 +1083,34 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-  .newsletter-outer{
-    .newsletter-inner{
-      .newsletter-inner-right{
-        .newsletter-inner-right-slider{
-          .title{
-            font-size: 20px!important;
+  .newsletter-outer {
+    .newsletter-inner {
+      .newsletter-inner-right {
+        .newsletter-inner-right-slider {
+          .title {
+            font-size: 20px !important;
           }
         }
       }
     }
-}
-
-.newsletter-card-inner {
-  .title {
-    font-size: 30px !important;
   }
 
-  .sub-title {
-    text-align: center;
-  }
-}
+  .newsletter-card-inner {
+    .title {
+      font-size: 30px !important;
+    }
 
-.newsletter-bottom-inner-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+    .sub-title {
+      text-align: center;
+    }
+  }
+
+  .newsletter-bottom-inner-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
 }
 
@@ -1084,3 +1154,121 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 }
+
+
+@media (max-width: 500px) {
+
+  .main-home-outer,
+  .deals-area-outer, {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  //main page
+
+  .main-home-outer {
+    .main-home-inner {
+      height: auto;
+      padding: 0;
+      margin: 0;
+
+      .carousel-inner {
+        .carousel-item {
+          .slide-image {
+            height: 300px;
+          }
+
+          .carousel-caption {
+            padding: 0;
+
+            h1 {
+              font-size: 35px;
+            }
+
+            p {
+              padding: 0 40px;
+              text-align: center;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  //reviews page
+
+  .top-reviews-outer {
+    .top-reviews-inner {
+      .video-area-outer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 300px;
+      }
+    }
+  }
+
+}
+
+
+//deals and discounts media queries
+
+@media (max-width: 500px) {
+  .deals-and-discounts-outer {
+    .deals-and-discounts-inner {
+      .grid-item-container {
+        .item-01 {
+          height: 300px !important;
+
+          .title{
+            font-size: 20px!important;
+          }
+
+          .grid-item-inner {
+            height: 300px !important;
+          }
+        }
+        .item-04{
+          height: 300px;
+
+          .subtitle{
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1200px) {
+
+
+
+  .grid-item-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-04{
+    height: 300px!important;
+  }
+
+  .grid-item-container > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+//deals and discounts media queries
+
+

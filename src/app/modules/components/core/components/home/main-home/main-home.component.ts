@@ -5,6 +5,8 @@ import {MostPopularToursCarousel} from "../../../../shared/interfaces/most-popul
 import {LastMinutesOffer} from "../../../../shared/interfaces/last-minutes-offer";
 import {BlogPost} from "../../../../shared/interfaces/blog-post";
 import {NewsletterCarousel} from "../../../../shared/interfaces/newsletter-carousel";
+import {DealsAndDiscounts} from "../../../../shared/interfaces/deals-and-discounts";
+import {ReviewCarousel} from "../../../../shared/interfaces/review-carousel";
 
 @Component({
   selector: 'app-main-home',
@@ -150,7 +152,6 @@ export class MainHomeComponent {
     },
   ];
 
-
   @Input() blogPost:BlogPost[] = [
     {
       imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/blog-image-1-600x480.jpg',
@@ -214,24 +215,93 @@ export class MainHomeComponent {
     },
   ];
 
-
   @Input() newsLetterCarousel:NewsletterCarousel[]=[
     {
       imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image.png',
-      city:'Barcelona',
+      city:'Barcelona ',
       specialText:'50% OFF'
     },
     {
       imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image2.png',
-      city:'London',
+      city:'London ',
       specialText:'Last Minutes'
     },
     {
       imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-image.png',
-      city:'Paris',
+      city:'Paris ',
       specialText:'Shopping'
     },
-  ]
+  ];
+
+  @Input() dealsAndDiscounts:DealsAndDiscounts[]=[
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-1.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-2.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-3.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-1.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-6.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-4.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+    {
+      imageUrl:'https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/main-home-masonry-gallery-image-4.jpg',
+      title:'Colorful india',
+      subTitle:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dolor eaque error excepturi exercitationem expedita ipsam nemo officiis, quis quo reiciendis repellat voluptas voluptatum?',
+      price:1600
+    },
+  ];
+
+  @Input() reviewCarousel:ReviewCarousel[] = [
+    {
+      city:'coloful india',
+      reviewStar:5,
+      reviewText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, corporis dolores earum eos illum nostrum perspiciatis rem repudiandae sint, soluta sunt tempore ullam, velit voluptate!',
+      reviewerAvatar:'https://secure.gravatar.com/avatar/c565181d9b0b43c58c5978e39ce5e196?s=54&d=mm&r=g',
+      reviewerName:'sandra medina'
+    },
+    {
+      city:'miami beach',
+      reviewStar:2,
+      reviewText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, corporis dolores earum eos illum nostrum perspiciatis rem repudiandae sint, soluta sunt tempore ullam, velit voluptate!',
+      reviewerAvatar:'https://secure.gravatar.com/avatar/5e05adc12f12755e7e36629cb3c4d0c5?s=54&d=mm&r=g',
+      reviewerName:'raymend thomas'
+    },
+
+    {
+      city:'yangshuo mist',
+      reviewStar:5,
+      reviewText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, corporis dolores earum eos illum nostrum perspiciatis rem repudiandae sint, soluta sunt tempore ullam, velit voluptate!',
+      reviewerAvatar:'https://secure.gravatar.com/avatar/70f6cb72f62fd8d94c61883b7cd7c29a?s=54&d=mm&r=g',
+      reviewerName:'tasha stewart'
+    },
+  ];
 
   customOptions: OwlOptions = {
     loop: true,
