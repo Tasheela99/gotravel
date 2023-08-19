@@ -1,1 +1,187 @@
-<p>zoom-slider works!</p>
+<div class="main-home-outer">
+  <div class="main-home-inner">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="" class=" slide-image slide-1 d-block w-100 zoom-in-out" alt="...">
+          <div class="container carousel-caption">
+            <h1 class="animate__animated animate__fadeInUp">your journey begins</h1>
+            <p class="animate__animated animate__fadeInUp ">a modern and beautiful wordpress theme for all
+              kinds of
+              travel and tourism business. Wordpress theme for all kinds of travel and tourism</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="" class=" slide-image slide-2 d-block w-100 zoom-in-out" alt="...">
+          <div class="container carousel-caption">
+            <h1 class="animate__animated animate__fadeInUp">awe-inspiring settings </h1>
+            <p class="animate__animated animate__fadeInUp">a modern and beautiful wordpress theme for all
+              kinds of
+              travel and tourism business. Wordpress theme for all kinds of travel and tourism</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="" class="slide-image slide-3 d-block w-100 zoom-in-out" alt="...">
+          <div class="container carousel-caption">
+            <h1 class="animate__animated animate__fadeInUp">Historic landmarks</h1>
+            <p class="animate__animated animate__fadeInUp">a modern and beautiful wordpress theme for all
+              kinds of
+              travel and tourism business. Wordpress theme for all kinds of travel and tourism</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="" class="slide-image slide-4 d-block w-100 zoom-in-out" alt="...">
+          <div class="container carousel-caption">
+            <h1 class="animate__animated animate__fadeInUp">a mystical adventure</h1>
+            <p class="animate__animated animate__fadeInUp">a modern and beautiful wordpress theme for all
+              kinds of
+              travel and tourism business. Wordpress theme for all kinds of travel and tourism</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="" class="slide-image slide-5 d-block w-100 zoom-in-out" alt="...">
+          <div class="container carousel-caption">
+            <h1 class="animate__animated animate__fadeInUp">top urban destinations</h1>
+            <p class="animate__animated animate__fadeInUp">a modern and beautiful wordpress theme for all
+              kinds of
+              travel and tourism business. Wordpress theme for all kinds of travel and tourism</p>
+          </div>
+        </div>
+      </div>
+
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!--mission and vision area starts-->
+
+<div class="about-and-mission-outer">
+  <div class="about-and-mission-inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 about-outer ">
+          <div class="inner-item">
+            <div class="title"><h3>About Us</h3></div>
+            <div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur
+              deserunt dolor eum inventore, ipsum magnam molestias necessitatibus qui rem, repudiandae sit vel
+              voluptatem. A accusantium amet blanditiis cumque deserunt doloribus earum illo illum inventore ipsam iusto
+              maxime modi molestias nemo, quam quas sint, sit sunt ut veniam vero voluptatem.</p></div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mission-outer ">
+          <div class="inner-item">
+            <div class="title"><h3>our Mission</h3></div>
+            <div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur
+              deserunt dolor eum inventore, ipsum magnam molestias necessitatibus qui rem, repudiandae sit vel
+              voluptatem. A accusantium amet blanditiis cumque deserunt doloribus earum illo illum inventore ipsam iusto
+              maxime modi molestias nemo, quam quas sint, sit sunt ut veniam vero voluptatem.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--mission and vision area ends-->
+
+<!--special offer area starts-->
+
+<div class="special-offer-outer">
+  <div class="special-offer-inner">
+    <div class="container ">
+      <div class="row special-offer-inner-top">
+        <div class="col-12 col-lg-6 ">
+          <h1 class="title">popular tours</h1>
+          <p class="sub-title"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque dolorum
+            eos fuga officia quo recusandae! Debitis laborum perspiciatis voluptatem?</p>
+        </div>
+      </div>
+      <div class="row special-offer-inner-bottom">
+        <div class="col-12 col-lg-3 col-md-6 offer-item-column" *ngFor="let specialOffer of lastMinutesOffer">
+          <div class="card">
+            <div class="card-header" *ngIf="specialOffer.IsOfferAvailable">
+              <div class="offer-card"><p>{{specialOffer.offerText}}</p></div>
+            </div>
+            <img [src]="specialOffer.imageUrl" class="card-img-top" [alt]="specialOffer.funItemName">
+            <div class="card-body">
+              <div class="card-body-top">
+                <div class="fun-item-name"><p>{{specialOffer.funItemName}}</p></div>
+                <div class="price"><span class="pre-price"
+                                         *ngIf="specialOffer.IsPrePrice"><p>${{specialOffer.prePrice}}</p></span>
+                  <p>${{specialOffer.price}}</p></div>
+              </div>
+              <div class="card-body-bottom">
+                <div class="card-body-text"><p>{{specialOffer.funItemNameDescription}}</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--special offer area ends-->
+
+
+<!--satisfied area starts-->
+
+<div class="satisfied-area-outer">
+  <div class="satisfied-area-inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <owl-carousel-o [options]="satisfiedCarouselOptions">
+            <ng-container>
+              <ng-template carouselSlide>
+                <div class="carousel-outer">
+                  <div class="carousel-inner">
+                    <div class="title"><h4>Amazing tour</h4></div>
+                    <div class="description col-12 col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+                      dolores labore nam nulla repudiandae unde veritatis voluptas! Ad, esse magni?</p></div>
+                    <div class="name"><h6>Gustave Flaubert, <span>Flaubert in Eygpt</span></h6></div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="carousel-outer">
+                  <div class="carousel-inner">
+                    <div class="title"><h4>Amazing tour</h4></div>
+                    <div class="description col-12 col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+                      dolores labore nam nulla repudiandae unde veritatis voluptas! Ad, esse magni?</p></div>
+                    <div class="name"><h6>Gustave Flaubert, <span>Flaubert in Eygpt</span></h6></div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="carousel-outer">
+                  <div class="carousel-inner">
+                    <div class="title"><h4>Amazing tour</h4></div>
+                    <div class="description col-12 col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+                      dolores labore nam nulla repudiandae unde veritatis voluptas! Ad, esse magni?</p></div>
+                    <div class="name"><h6>Gustave Flaubert, <span>Flaubert in Eygpt</span></h6></div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--satisfied area ends-->
