@@ -17,108 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $title-font;
 }
 
-
-.main-home-outer {
-  height: auto;
-  width: 100%;
-}
-
-.main-home-inner {
-  width: 100%;
-  height: 100%;
-}
-
-
-@mixin slider-image($imageUrl) {
-  width: 100%;
-  height: 75vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url($imageUrl);
-
-}
-
-.slide-1 {
-  @include slider-image("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-1.jpg");
-}
-
-.slide-2 {
-  @include slider-image("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-2.jpg");
-}
-
-.slide-3 {
-  @include slider-image("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-3.jpg");
-}
-
-.slide-4 {
-  @include slider-image("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-4.jpg");
-}
-
-.slide-5 {
-  @include slider-image("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-5.jpg");
-}
-
-.carousel-inner {
-  .carousel-item {
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-  }
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  text-align: center;
-
-  h1 {
-    font-size: 80px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    padding: 0 0 20px 0;
-    animation-delay: 0.5s;
-    color: white;
-  }
-
-  p {
-    font-size: 18px;
-    text-transform: capitalize;
-    line-height: 25px !important;
-    padding: 0 100px;
-    font-weight: bold;
-    animation-delay: 1s;
-    color: white;
-  }
-}
-
-
-//animation for landing page slide
-
-.zoom-in-out {
-  animation: zoom-in-zoom-out 15s ease-in-out infinite;
-}
-
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1.1, 1.1);
-  }
-  50% {
-    transform: scale(1.2, 1.2);
-  }
-  100% {
-    transform: scale(1.1, 1.1);
-  }
-}
-
-
 .form-area-outer {
   width: 100%;
   height: 100px;
@@ -197,40 +95,43 @@ h1, h2, h3, h4, h5, h6 {
   .deals-and-discounts-inner {
     .grid-item-container {
 
-      .item-04{
+      .item-04 {
 
-        .title{
+        .title {
           text-transform: uppercase;
         }
+
         height: auto;
 
 
-        .grid-item-inner{
+        .grid-item-inner {
           width: 100%;
           height: 100%;
           padding: 10px;
 
-          .grid-item-inner-image-outer{
+          .grid-item-inner-image-outer {
 
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             position: relative;
 
-            .overlay-text{
-              display: flex!important;
+            .overlay-text {
+              display: flex !important;
               background-color: white;
 
-              .title{
+              .title {
                 font-family: Poppins, sans-serif;
-                color: #363636!important;
+                color: #363636 !important;
               }
-              .subtitle{
+
+              .subtitle {
                 color: #808285;
                 font-size: 18px;
                 font-family: 'Raleway', sans-serif;
               }
 
-              .title-reduced{
-                font-size: 20px!important;
+              .title-reduced {
+                font-size: 20px !important;
               }
             }
           }
@@ -272,13 +173,15 @@ h1, h2, h3, h4, h5, h6 {
             box-sizing: border-box;
             z-index: 1;
 
-            .title{
+            .title {
 
             }
-            .subtitle{
+
+            .subtitle {
 
             }
-            .price{
+
+            .price {
               color: $app-color;
               font-weight: 900;
               font-size: 20px;
@@ -355,7 +258,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 //Tour type starts
 
 .tour-type-outer {
@@ -376,54 +278,21 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/10/home-image.jpg?id=4049");
 
-
     .tour-type-inner-top {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: center;
       width: 100%;
       height: 50%;
-
-      h1 {
-        color: #FFFFFF;
-        text-transform: uppercase;
-        font-weight: 900;
-      }
-
-      p {
-        color: white;
-      }
     }
 
     .tour-type-inner-bottom {
       width: 100%;
-      height: 50%;
-
-
-      .tour-item-outer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:hover {
-          transform: translateY(-20px);
-          transition-duration: 1s;
-          cursor: pointer;
-        }
-
-
-        .card {
-          p {
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 15px;
-          }
-        }
-      }
+      height: auto;
     }
-
   }
 }
+
 
 //Tour type ends
 
@@ -433,67 +302,6 @@ h1, h2, h3, h4, h5, h6 {
 .popular-tours-outer {
   height: auto;
   padding: 50px 0;
-
-  .popular-tours-inner {
-    .popular-tours-inner-top-items {
-      text-align: center;
-      padding: 30px 10px;
-
-      h1 {
-        text-transform: uppercase;
-        font-weight: 900;
-      }
-    }
-
-    .city-name h4 {
-      text-transform: capitalize;
-      font-weight: 900;
-
-      &:hover {
-        color: $app-color;
-        cursor: pointer;
-      }
-    }
-
-    .cost {
-      .discount {
-        padding: 0 10px;
-        text-decoration: line-through;
-      }
-
-      .price {
-        font-weight: 900;
-        color: $app-color;
-
-      }
-    }
-
-    .ranking {
-      .rank {
-
-      }
-    }
-
-    .popular-tour-description {
-      padding: 20px 0;
-      text-align: left;
-    }
-
-    .popular-tour-footer {
-      gap: 20px;
-      color: white;
-      border: none;
-      border-radius: 0;
-      background-color: $app-color;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-    }
-
-  }
-
-
 }
 
 //Most Popular Tours
@@ -569,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
         padding-bottom: 20px;
 
 
-        .fa-star{
+        .fa-star {
           color: $app-color;
         }
       }
@@ -587,7 +395,8 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
           justify-content: center;
           padding-right: 30px;
-          img{
+
+          img {
             border-radius: 50%;
           }
 
@@ -848,7 +657,7 @@ h1, h2, h3, h4, h5, h6 {
         .card-alternatives {
           display: flex;
           align-items: center;
-          justify-content: start;
+          justify-content: flex-start;
           gap: 20px;
         }
 
@@ -1225,18 +1034,19 @@ h1, h2, h3, h4, h5, h6 {
         .item-01 {
           height: 300px !important;
 
-          .title{
-            font-size: 20px!important;
+          .title {
+            font-size: 20px !important;
           }
 
           .grid-item-inner {
             height: 300px !important;
           }
         }
-        .item-04{
+
+        .item-04 {
           height: 300px;
 
-          .subtitle{
+          .subtitle {
             display: none;
           }
         }
@@ -1253,14 +1063,13 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1200px) {
 
 
-
   .grid-item-container {
     display: flex;
     flex-direction: column;
   }
 
-  .item-04{
-    height: 300px!important;
+  .item-04 {
+    height: 300px !important;
   }
 
   .grid-item-container > div {

@@ -82,6 +82,10 @@ import { ShopContextComponent } from './components/shop/shop-context/shop-contex
 import { ToursContextComponent } from './components/tours/tours-context/tours-context.component';
 import { ElementsContextComponent } from './components/elements/elements-context/elements-context.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
+import { HomePageMainSliderComponent } from './components/home/items/inner-components/home-page-main-slider/home-page-main-slider.component';
+import { HomePageTourCarouselComponent } from './components/home/items/inner-components/home-page-tour-carousel/home-page-tour-carousel.component';
+import { HomePageSectionHeaderComponent } from './components/home/items/inner-components/home-page-section-header/home-page-section-header.component';
+import { HomePageTourPlaceCarouselComponent } from './components/home/items/inner-components/home-page-tour-place-carousel/home-page-tour-place-carousel.component';
 
 
 @NgModule({
@@ -165,6 +169,10 @@ import {CarouselModule} from "ngx-owl-carousel-o";
     ShopContextComponent,
     ToursContextComponent,
     ElementsContextComponent,
+    HomePageMainSliderComponent,
+    HomePageTourCarouselComponent,
+    HomePageSectionHeaderComponent,
+    HomePageTourPlaceCarouselComponent,
 
   ],
   imports: [

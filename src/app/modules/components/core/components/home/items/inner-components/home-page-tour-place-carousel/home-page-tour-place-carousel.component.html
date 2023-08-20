@@ -1,0 +1,37 @@
+<div class="container">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let popularItem of mostPopularCarousel">
+      <ng-template carouselSlide>
+        <div class="tour-item-outer">
+          <div class="tour-item-inner">
+            <div class="card">
+              <img [src]="popularItem.imageUrl" class="card-img-top"
+                   [alt]="popularItem.city">
+              <div class="card-body">
+                <div class="card-title d-flex justify-content-between">
+                  <span class="city-name"><h4>{{popularItem.city}}</h4></span>
+                  <div class="cost d-flex">
+                    <span class="discount"><p>{{popularItem.discount}}</p></span>
+                    <span class="price"><h4>${{popularItem.price}}</h4></span>
+                  </div>
+                </div>
+                <div class="ranking">
+                  <p class="rank">{{popularItem.rate}} <span>Superb</span></p>
+                </div>
+                <p class="card-text popular-tour-description">{{popularItem.description}}</p>
+              </div>
+              <div class="card-footer popular-tour-footer d-flex">
+                <div class="days"><i
+                  class="fa-regular fa-calendar"></i> {{popularItem.tourInfoDays}}
+                  <span>Days</span></div>
+                <div class="age"><i
+                  class="fa-solid fa-child"></i> {{popularItem.tourInfoAge}}
+                  <span>+</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

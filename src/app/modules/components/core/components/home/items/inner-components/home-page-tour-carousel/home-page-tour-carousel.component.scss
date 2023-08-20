@@ -1,0 +1,95 @@
+$app-color: rgb(0, 189, 187);
+
+
+.tour-item-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  .tour-item-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 340px;
+
+    &:hover {
+      transform: translateY(-20px);
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    .card {
+      height: 100%;
+      border: none;
+      border-radius: 0;
+
+
+      p {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 15px;
+      }
+    }
+
+    .popular-tours-inner {
+      .popular-tours-inner-top-items {
+        text-align: center;
+        padding: 30px 10px;
+
+        h1 {
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+      }
+
+      .city-name h4 {
+        text-transform: capitalize;
+        font-weight: 900;
+
+        &:hover {
+          color: $app-color;
+          cursor: pointer;
+        }
+      }
+
+      .cost {
+        .discount {
+          padding: 0 10px;
+          text-decoration: line-through;
+        }
+
+        .price {
+          font-weight: 900;
+          color: $app-color;
+
+        }
+      }
+
+      .ranking {
+        .rank {
+
+        }
+      }
+
+      .popular-tour-description {
+        padding: 20px 0;
+        text-align: left;
+      }
+
+      .popular-tour-footer {
+        gap: 20px;
+        color: white;
+        border: none;
+        border-radius: 0;
+        background-color: $app-color;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+    }
+  }
+}
+

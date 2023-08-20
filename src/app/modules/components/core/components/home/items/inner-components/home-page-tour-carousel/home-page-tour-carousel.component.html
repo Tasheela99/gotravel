@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="tour-type-inner-bottom">
+    <div class="tour-type-inner-carousel-outer">
+      <div class="tour-type-inner-carousel-inner ">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let item of tourTypeCarousel">
+            <ng-template carouselSlide>
+              <div class="tour-item-outer">
+                <div class="tour-item-inner">
+                  <div class="card">
+                    <img [src]="item.imageUrl" class="card-img-top"
+                         [alt]="item.description">
+                    <div class="card-body">
+                      <p class="card-text text-center">{{item.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
