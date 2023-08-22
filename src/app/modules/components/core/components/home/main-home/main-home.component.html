@@ -1,45 +1,9 @@
 <app-home-page-main-slider></app-home-page-main-slider>
-
-<div class="carousel-caption-1">
-  <div class="carousel-caption-1-inner">
-    <div class="container">
-      <div class="row form-row">
-        <div class="form-item col-12 col-lg-3">
-          <div class="input-group">
-            <span class="input-group-text border-0 bg-none rounded-0" id="addon-wrapping"><i
-              class="fa-solid fa-compass"></i></span>
-            <input type="text" class="w-100 border-0 rounded-0 m-0 p-0" placeholder="where to"
-                   aria-label="Username"
-                   aria-describedby="addon-wrapping">
-          </div>
-        </div>
-        <div class="form-item col-12 col-lg-3">
-          <div class="input-group">
-            <span class="input-group-text border-0 bg-none rounded-0" id="addon-wrapping-1"><i
-              class="fa-regular fa-calendar"></i></span>
-            <input type="text" class="w-100 border-0 rounded-0 m-0 p-0" placeholder="month"
-                   aria-label="Username"
-                   aria-describedby="addon-wrapping">
-          </div>
-        </div>
-        <div class="form-item col-12 col-lg-3">
-          <div class="input-group">
-            <span class="input-group-text border-0 bg-none rounded-0" id="addon-wrapping-2"><i
-              class="fa-solid fa-thumbtack"></i></span>
-            <input type="text" class="w-100 border-0 rounded-0 m-0 p-0" placeholder="travel type"
-                   aria-label="Username"
-                   aria-describedby="addon-wrapping">
-          </div>
-        </div>
-        <div class="form-item col-12 col-lg-2">
-          <button type="submit" class="submit-btn" style="width: 100%; height: 60px">find now</button>
-        </div>
-      </div>
-    </div>
+<div class="form-outer">
+  <div class="form-inner">
+    <app-home-page-form></app-home-page-form>
   </div>
 </div>
-
-
 <!--deals and discounts starts-->
 <div class="deals-and-discounts-outer">
   <div class="deals-and-discounts-inner">
@@ -270,10 +234,13 @@
   <div class="special-offer-inner">
     <div class="container ">
       <div class="row special-offer-inner-top">
-        <div class="col-12 col-lg-6 ">
-          <h1 class="title">last minutes</h1>
-          <p class="sub-title"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cumque dolorum
-            eos fuga officia quo recusandae! Debitis laborum perspiciatis voluptatem?</p>
+        <div class="col-12">
+          <app-home-page-section-header
+            [title]="'last minutes'"
+            [description]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores eos\n'+
+'            exercitationem, explicabo hic illo in laudantium, magnam obcaecati porro, quaerat quidem rem\n'+
+'            vero voluptates.'"
+          ></app-home-page-section-header>
         </div>
       </div>
       <div class="row special-offer-inner-bottom">
@@ -315,7 +282,10 @@
           <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores eos
             exercitationem, explicabo hic illo in laudantium, magnam obcaecati porro, quaerat quidem rem
             vero voluptates.</p>
-          <button class="subscribe-btn">subscribe</button>
+          <app-home-page-custom-button
+            [textColor]="'white'"
+            [backgroundColor]="'rgb(0, 189, 187)'"
+          ></app-home-page-custom-button>
         </div>
       </div>
     </div>
@@ -331,11 +301,13 @@
   <div class="blog-post-area-inner">
     <div class="container">
       <div class="row blog-post-area-inner-items-rows">
-        <div class="col-12 col-lg-6 blog-post-area-inner-items">
-          <h1 class="title">blog post</h1>
-          <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores eos
-            exercitationem, explicabo hic illo in laudantium, magnam obcaecati porro, quaerat quidem rem
-            vero voluptates.</p>
+        <div class="col-12">
+          <app-home-page-section-header
+            [title]="'blog post'"
+            [description]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores eos\n'+
+'            exercitationem, explicabo hic illo in laudantium, magnam obcaecati porro, quaerat quidem rem\n'+
+'            vero voluptates.'"
+          ></app-home-page-section-header>
         </div>
       </div>
       <div class="row blog-post-area-inner-bottom">
@@ -361,53 +333,8 @@
 
 
 <!--news letter area starts-->
-
-<div class="newsletter-outer">
-  <div class="newsletter-inner">
-    <div class="newsletter-inner-left">
-      <div class="newsletter-inner-left-item">
-        <div class="newsletter-card-outer">
-          <div class="newsletter-card-inner">
-            <h1 class="title">Join the newsletter</h1>
-            <p class="sub-title">to receive our monthly deals</p>
-            <form action="" class="newsletter-form">
-              <input type="text" name="email" id="email" placeholder="E-mail">
-              <button class="newsletter-subscribe-btn">Subscribe</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="newsletter-inner-right">
-      <div class="newsletter-inner-right-slider">
-        <owl-carousel-o [options]="newsLetterSliderOptions">
-          <ng-container *ngFor="let newsletter of newsLetterCarousel">
-            <ng-template carouselSlide>
-              <img [src]="newsletter.imageUrl" width="500" class="animate__animated animate__fadeInUp animate__delay-2s"
-                   [alt]="newsletter.city">
-              <h1 class="title animate__animated animate__slideInLeft animate__delay-2s ">{{newsletter.city}} <span
-                class="specialText">&nbsp; {{newsletter.specialText}}</span></h1>
-            </ng-template>
-          </ng-container>
-        </owl-carousel-o>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="newsletter-bottom-outer">
-  <div class="newsletter-bottom-inner">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 newsletter-bottom-inner-items">
-          <div class="inner-text"><h4>How Beautiful Is To Do Nothing And Then Rest Afterwards And Then Rest.</h4></div>
-          <div class="inner-button">
-            <button class="newsletter-bottom-subscribe-btn">Subscribe</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-home-page-newsletter-section></app-home-page-newsletter-section>
+<app-home-page-subscribe-bar></app-home-page-subscribe-bar>
 
 <!--news letter area ends-->
 

@@ -86,6 +86,12 @@ import { HomePageMainSliderComponent } from './components/home/items/inner-compo
 import { HomePageTourCarouselComponent } from './components/home/items/inner-components/home-page-tour-carousel/home-page-tour-carousel.component';
 import { HomePageSectionHeaderComponent } from './components/home/items/inner-components/home-page-section-header/home-page-section-header.component';
 import { HomePageTourPlaceCarouselComponent } from './components/home/items/inner-components/home-page-tour-place-carousel/home-page-tour-place-carousel.component';
+import { HomePageSectionDividerComponent } from './components/home/items/inner-components/home-page-section-divider/home-page-section-divider.component';
+import { HomePageVideoAndReviewSectionComponent } from './components/home/items/inner-components/home-page-video-and-review-section/home-page-video-and-review-section.component';
+import { HomePageSubscribeBarComponent } from './components/home/items/inner-components/home-page-subscribe-bar/home-page-subscribe-bar.component';
+import { HomePageCustomButtonComponent } from './components/home/items/inner-components/home-page-custom-button/home-page-custom-button.component';
+import { HomePageNewsletterSectionComponent } from './components/home/items/inner-components/home-page-newsletter-section/home-page-newsletter-section.component';
+import { HomePageFormComponent } from './components/home/items/inner-components/home-page-form/home-page-form.component';
 
 
 @NgModule({
@@ -173,6 +179,12 @@ import { HomePageTourPlaceCarouselComponent } from './components/home/items/inne
     HomePageTourCarouselComponent,
     HomePageSectionHeaderComponent,
     HomePageTourPlaceCarouselComponent,
+    HomePageSectionDividerComponent,
+    HomePageVideoAndReviewSectionComponent,
+    HomePageSubscribeBarComponent,
+    HomePageCustomButtonComponent,
+    HomePageNewsletterSectionComponent,
+    HomePageFormComponent,
 
   ],
   imports: [

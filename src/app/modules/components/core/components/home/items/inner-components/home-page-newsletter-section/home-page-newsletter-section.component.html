@@ -1,0 +1,35 @@
+<div class="newsletter-outer">
+  <div class="newsletter-inner">
+    <div class="newsletter-inner-left">
+      <div class="newsletter-inner-left-item">
+        <div class="newsletter-card-outer">
+          <div class="newsletter-card-inner">
+            <h1 class="title">Join the newsletter</h1>
+            <p class="sub-title">to receive our monthly deals</p>
+            <form action="" class="newsletter-form">
+              <input type="text" name="email" id="email" placeholder="E-mail">
+              <app-home-page-custom-button
+                [textColor]="'white'"
+                [backgroundColor]="'rgb(0, 189, 187)'"
+              ></app-home-page-custom-button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="newsletter-inner-right">
+      <div class="newsletter-inner-right-slider">
+        <owl-carousel-o [options]="newsLetterSliderOptions">
+          <ng-container *ngFor="let newsletter of newsLetterCarousel">
+            <ng-template carouselSlide>
+              <img [src]="newsletter.imageUrl" width="500" class="animate__animated animate__fadeInUp animate__delay-2s"
+                   [alt]="newsletter.city">
+              <h1 class="title animate__animated animate__slideInLeft animate__delay-2s ">{{newsletter.city}} <span
+                class="specialText">&nbsp; {{newsletter.specialText}}</span></h1>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>

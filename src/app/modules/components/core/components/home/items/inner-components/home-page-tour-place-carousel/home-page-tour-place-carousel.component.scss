@@ -1,29 +1,58 @@
+$app-color: rgb(0, 189, 187);
+
 .container{
   .tour-item-outer{
+    width: 100%;
+    height: auto;
     .tour-item-inner{
+      border: none;
+      border-radius: 0;
+      height: 600px;
       .card{
+        border: none;
+        border-radius: 0;
         .card-body{
+          border: none;
+          border-radius: 0;
           .card-title{
             .city-name{
-
+              h4{
+                text-transform: capitalize;
+                font-weight: 700;
+              }
             }
             .cost{
-              .discount{}
-              .price{}
+              .discount{
+                p{
+                  text-decoration: line-through;
+                }
+              }
+              .price{
+                font-weight: 900;
+                color: $app-color;
+              }
             }
           }
           .ranking{
-            .rank{
-
-            }
+            font-family: 'Raleway', sans-serif;
+            color: #BDBDBD;
           }
 
           .popular-tour-description{
-
+            font-family: 'Raleway', sans-serif;
+            color: #BDBDBD;
+            font-size: 15px;
           }
 
         }
         .popular-tour-footer{
+          border: none;
+          border-radius: 0;
+          background-color: $app-color;
+          padding: 20px;
+          color: #FFFFFF;
+          gap: 20px;
+          font-family: 'Raleway', sans-serif;
           .days{}
           .age{}
         }

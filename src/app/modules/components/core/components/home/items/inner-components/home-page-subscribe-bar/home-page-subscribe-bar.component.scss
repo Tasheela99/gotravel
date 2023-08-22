@@ -1,0 +1,35 @@
+$app-color: rgb(0, 189, 187);
+
+.home-page-subscribe-bar-outer {
+  width: 100%;
+  height: auto;
+
+  .home-page-subscribe-bar-inner {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $app-color;
+
+    .newsletter-bottom-inner-items {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .inner-text > h4 {
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-weight: 700;
+      }
+
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .newsletter-bottom-inner-items {
+    flex-direction: column;
+  }
+}

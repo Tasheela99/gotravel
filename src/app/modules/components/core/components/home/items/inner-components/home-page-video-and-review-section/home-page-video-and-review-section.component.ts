@@ -1,13 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
-import {ReviewCarousel} from "../../../../shared/interfaces/review-carousel";
+import {ReviewCarousel} from "../../../../../../shared/interfaces/review-carousel";
 
 @Component({
-  selector: 'app-video-slider',
-  templateUrl: './video-slider.component.html',
-  styleUrls: ['./video-slider.component.scss']
+  selector: 'app-home-page-video-and-review-section',
+  templateUrl: './home-page-video-and-review-section.component.html',
+  styleUrls: ['./home-page-video-and-review-section.component.scss']
 })
-export class VideoSliderComponent {
+export class HomePageVideoAndReviewSectionComponent {
 
   reviewerCarousel: OwlOptions = {
     loop: true,

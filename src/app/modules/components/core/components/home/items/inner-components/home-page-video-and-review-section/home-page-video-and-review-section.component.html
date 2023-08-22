@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="video-area-outer">
+        <div class="video-area-inner">
+          <i class="fa-regular fa-circle-play"></i>
+          <h1 class="title">watch our video</h1>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="review-carousel-outer">
+        <div class="review-carousel-inner">
+          <h1 class="title">top reviews</h1>
+          <div class="container m-0 p-0">
+            <owl-carousel-o [options]="reviewerCarousel">
+              <ng-container *ngFor="let review of reviewCarousel">
+                <ng-template carouselSlide>
+                  <div class="tour-item-outer">
+                    <div class="tour-item-inner">
+                      <div class="card border-0 m-0 p-0" style="width: 100%">
+                        <div class="card-body m-0 p-0 fade-in-right">
+                          <h5 class="card-title">{{review.city}}</h5>
+                          <h6 class="card-subtitle mb-2 text-body-secondary d-flex align-items-center">
+                            <div class="review-star-container"
+                                 *ngFor="let _ of [].constructor(review.reviewStar); let i = index">
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                          </h6>
+                          <p class="card-text">{{review.reviewText}}</p>
+                          <div class="reviewer-details">
+                            <div class="avatar"><img [src]="review.reviewerAvatar" [alt]="review.reviewerName">
+                            </div>
+                            <div class="avatar-name">{{review.reviewerName}}</div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ng-container>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
