@@ -92,6 +92,7 @@ import { HomePageSubscribeBarComponent } from './components/home/items/inner-com
 import { HomePageCustomButtonComponent } from './components/home/items/inner-components/home-page-custom-button/home-page-custom-button.component';
 import { HomePageNewsletterSectionComponent } from './components/home/items/inner-components/home-page-newsletter-section/home-page-newsletter-section.component';
 import { HomePageFormComponent } from './components/home/items/inner-components/home-page-form/home-page-form.component';
+import { HomePageInfoSectionComponent } from './components/home/items/inner-components/home-page-info-section/home-page-info-section.component';
 
 
 @NgModule({
@@ -185,6 +186,7 @@ import { HomePageFormComponent } from './components/home/items/inner-components/
     HomePageCustomButtonComponent,
     HomePageNewsletterSectionComponent,
     HomePageFormComponent,
+    HomePageInfoSectionComponent,
 
   ],
   imports: [

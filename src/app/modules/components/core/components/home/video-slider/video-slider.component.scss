@@ -23,52 +23,5 @@ $app-color: rgb(0, 189, 187);
     width: 100%;
     height: 100%;
 
-    .container{
-      .row{
-        .inner-items-outer{
-          height: 200px;
-          padding: 10px;
-
-          .inner-item-top{
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            height: auto;
-            .card{
-              margin: 0;
-              padding: 0;
-              border: none;
-              background-color: transparent;
-              .card-body{
-                margin: 0;
-                padding: 0;
-
-                h5{
-                  text-transform: capitalize;
-                  font-weight: 700;
-                  font-family: 'Poppins', sans-serif;
-                }
-
-
-                .card-title{
-                  .fa-solid, .fa-regular{
-                    font-size: 30px;
-                    padding-right: 12px;
-                    color: $app-color;
-                  }
-                }
-                .card-text{
-                  padding-left: 40px!important;
-                  font-size: 15px;
-                  font-family:'Raleway', sans-serif;
-                  text-align: justify;
-                }
-              }
-            }
-          }
-
-        }
-      }
-    }
   }
 }

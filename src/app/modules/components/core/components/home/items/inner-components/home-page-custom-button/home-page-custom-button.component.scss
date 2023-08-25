@@ -19,12 +19,13 @@ button{
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
   .custom-button-inner{
     padding: 10px;
   }
   button{
+    padding: 20px 0;
     width: 100%;
   }
 }

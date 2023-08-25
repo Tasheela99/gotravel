@@ -22,4 +22,108 @@
   }
 }
 
+//////////////////////////////////////////info section
 
+.parallax-info-item-outer{
+  width: 100%;
+  height: auto;
+
+  .parallax-info-item-inner{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+.parallax-play-video-outer{
+  width: 100%;
+  height: auto;
+  .parallax-play-video-inner{
+    width: 100%;
+    height: 700px;
+    background-image: url("https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/ken-slide-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+
+      .play-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+        button{
+          background-color: transparent;
+          border: none;
+
+
+          &:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition-duration: 0.5s ;
+          }
+        }
+
+        .fa-circle-play{
+          font-size: 60px;
+          color: white;
+        }
+
+        h2{
+          font-weight: 700;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+          text-transform: capitalize;
+        }
+      }
+
+    }
+  }
+}
+
+
+////////////////////////////////// county image grid
+
+
+.parallax-country-grid-outer{
+  width: 100%;
+  height: auto;
+
+
+  .parallax-country-grid-inner{
+    width: 100%;
+    height: 100%;
+
+    .container{
+      .row{
+        .image-column{
+          margin: 0;
+          padding: 0;
+
+          .parallax-country-grid-inner-image-outer{
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+
+
+            .parallax-country-grid-inner-image{
+              width: 100%;
+              height: 100%;
+              border: 2px solid red;
+            }
+          }
+        }
+
+      }
+    }
+
+
+  }
+}
